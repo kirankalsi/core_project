@@ -5,4 +5,5 @@ from application import app
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    manufacturer = requests.get("http://35.242.189.130:5001/manufacturer")
+    return render_template('index.html', manufacturer=manufacturer.text)
