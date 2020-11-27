@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% block body_content %}
+
+<p>Your next car will be...</p>
+<p>{{ manufacturer }} {{ type }}</p>
+<p>Unhappy with your result?</p>
+<p>Click the button to generate another car</p>
+<button onClick="window.location.reload();">Generate Another Car</button>
+
+{% endblock body_content %}
