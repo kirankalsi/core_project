@@ -7,4 +7,5 @@ from application import app
 def index():
     manufacturer = requests.get("http://34.105.145.24:5001/manufacturer")
     vehicle_type = requests.get("http://34.105.145.24:5002/vehicle_type")
-    return render_template('index.html', manufacturer=manufacturer.text, vehicle_type=vehicle_type.text)
+    total_price = requests.post("http://34.105.145.24:5003/total_price", data=manufacturer.text)
+    return render_template('index.html', manufacturer=manufacturer.text, vehicle_type=vehicle_type.text, data2=manufacturer.text, data3=vehicle_type.text)
