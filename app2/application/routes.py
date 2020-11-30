@@ -1,4 +1,4 @@
-from flask import Flask, Response, request, jsonify
+from flask import Flask, Response, request
 import random
 
 from application import app
@@ -9,21 +9,21 @@ def manufacturer():
     manufacturer = random.choice(manufacturers)
     return Response(manufacturer, mimetype='text/plain')
 
-@app.route('/price', methods=['POST'])
-def price():
+@app.route('/man_price', methods=['POST'])
+def man_price():
     data_sent = request.data.decode('utf-8')
     if data_sent == 'Audi':
-        price = 44500
+        man_price = 44500
     elif data_sent == 'BMW':
-        price = 45000
+        man_price = 45000
     elif data_sent == 'Porsche':
-        price = 99000
+        man_price = 99000
     elif data_sent == 'Ford':
-        price = 11500
+        man_price = 11500
     elif data_sent == 'Ferrari':
-        price = 160000
+        man_price = 160000
     elif data_sent == 'Lamborghini':
-        price = 150000
+        man_price = 150000
     else:
-        price = 26500
-    return Response(price, mimetype='text/plain')
+        man_price = 26500
+    return Response(man_price, mimetype='text/plain')
