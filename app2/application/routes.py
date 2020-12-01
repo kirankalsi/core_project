@@ -9,6 +9,7 @@ def manufacturer():
     manufacturer = random.choice(manufacturers)
     return Response(manufacturer, mimetype='text/plain')
 
+'''
 @app.route('/man_price', methods=['POST'])
 def man_price():
     data_sent = request.data.decode('utf-8')
@@ -27,3 +28,4 @@ def man_price():
     else:
         man_price = 26500
     return Response(man_price, mimetype='text/plain')
+'''

@@ -9,6 +9,7 @@ def vehicle_type():
     vehicle_type = random.choice(vehicle_type)
     return Response(vehicle_type, mimetype='text/plain')
 
+'''
 @app.route('/veh_price', methods=['POST'])
 def veh_price():
     data_sent = request.data.decode('utf-8')
@@ -27,3 +28,4 @@ def veh_price():
     else:
         veh_price = 9999
     return Response(veh_price, mimetype='text/plain')
+'''
