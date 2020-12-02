@@ -5,10 +5,10 @@ from application import app, db
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    manufacturer = requests.get("http://34.105.145.24:5001/manufacturer")
-    vehicle_type = requests.get("http://34.105.145.24:5002/vehicle_type")
+    manufacturer = requests.get("http://app2:5001/manufacturer")
+    vehicle_type = requests.get("http://app3:5002/vehicle_type")
     dictionary = {'manufacturer': manufacturer.text, 'vehicle_type': vehicle_type.text}
-    total_price = requests.post("http://34.105.145.24:5003/total_price", json=dictionary)
+    total_price = requests.post("http://app4:5003/total_price", json=dictionary)
 
     db_info = Vehicles(manufacturer=manufacturer.text, vehicle_type=vehicle_type.text, total_price=total_price.text)
     db.session.add(db_info)
