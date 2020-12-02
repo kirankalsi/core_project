@@ -1,0 +1,61 @@
+version: "3.7"
+services:
+  app1:
+    image: kirankalsi/app1:latest
+    build: ./app1
+    #deploy:
+      #replicas: 2
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+    environment:
+      DB_URI: ${DB_URI}
+
+  app2:
+    image: kirankalsi/app2:latest
+    build: ./app2
+    #deploy:
+      #replicas: 2
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
+
+  app3:
+    image: kirankalsi/app3:latest
+    build: ./app3
+    #deploy:
+      #replicas: 2
+    ports:
+    - target: 5002
+      published: 5002
+      protocol: tcp
+
+  app4:
+    image: kirankalsi/app4:latest
+    build: ./app4
+    #deploy:
+      #replicas: 2
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
+  
+  database:
+    image: mysql:5.7
+    #deploy:
+      #replicas: 2
+    ports:
+    - target: 3306
+      published: 3306
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: core_project
+    volumes: 
+      - type: volume
+        source: database-volume
+        target: /var/lib/mysql
+
+volumes: 
+  database-volume: 
