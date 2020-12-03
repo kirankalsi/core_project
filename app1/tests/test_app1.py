@@ -9,7 +9,7 @@ from os import getenv
 class TestBase(TestCase):
 
     def create_app(self):
-        app.config.update(SQLALCHEMY_DATABASE_URI=getenv('TEST_DB_URI'),
+        app.config.update(SQLALCHEMY_DATABASE_URI='sqlite:///',#getenv('TEST_DB_URI'),
                 SECRET_KEY=getenv('TEST_SECRET_KEY'),
                 DEBUG=True
                 )
