@@ -3,3 +3,4 @@ pytest
 pytest-cov
 flask-testing
 requests
+flask-sqlalchemy
