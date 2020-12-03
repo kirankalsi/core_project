@@ -54,3 +54,21 @@ services:
     - target: 5003
       published: 5003
       protocol: tcp
+
+  database:
+    image: mysql:5.7
+    deploy:
+      replicas: 2
+    ports:
+    - target: 3306
+      published: 13306
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: core_project
+    volumes: 
+      - type: volume
+        source: database-volume
+        target: /var/lib/mysql
+
+volumes: 
+  database-volume:
