@@ -56,7 +56,7 @@ services:
       protocol: tcp
 
   database:
-    image: mysql:5.7
+    image: kirankalsi/mysql:5.7
     deploy:
       replicas: 2
     ports:
