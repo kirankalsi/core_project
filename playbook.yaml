@@ -1,5 +1,6 @@
 - hosts: managers
   become: true
+  become_method: runas
   roles:
   - role: passwordless-sudo
     vars:
