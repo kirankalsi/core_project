@@ -63,7 +63,7 @@ services:
     - target: 3306
       published: 3306
     environment: 
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
       MYSQL_DATABASE: core_project
     volumes: 
       - type: volume
