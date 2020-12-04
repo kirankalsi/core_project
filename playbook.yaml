@@ -1,9 +1,10 @@
 - hosts: managers
   become: true
   roles:
+  - passwordless-sudo
   - docker
   - manager
-  - passwordless-sudo
+  
 
 - hosts: workers
   become: true
