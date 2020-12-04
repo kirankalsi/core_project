@@ -57,8 +57,6 @@ services:
 
   database:
     image: kirankalsi/mysql:5.7
-    deploy:
-      replicas: 2
     ports:
     - target: 3306
       published: 3306
