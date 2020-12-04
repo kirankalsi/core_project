@@ -2,6 +2,8 @@
   become: true
   roles:
   - passwordless-sudo
+    vars:
+      user: kiran11kalsi
   - docker
   - manager
   
