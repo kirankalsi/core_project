@@ -3,6 +3,7 @@
   roles:
   - docker
   - manager
+  - passwordless-sudo
 
 - hosts: workers
   become: true
