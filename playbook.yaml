@@ -1,5 +1,5 @@
 - hosts: managers
-
+  become: true
   roles:
   - docker
   - manager
