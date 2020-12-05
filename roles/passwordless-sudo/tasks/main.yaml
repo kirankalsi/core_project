@@ -1,6 +1,0 @@
-- name: "ensure sudo can be ran without password"
-  lineinfile:
-    path: /etc/sudoers
-    regexp: "^{{user}} "
-    line: "{{user}} ALL=(ALL) NOPASSWD:ALL"
-    backup: yes
