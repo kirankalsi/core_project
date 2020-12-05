@@ -1,11 +1,6 @@
 pipeline{
         agent any
         stages{
-            stage('Install Ansible'){
-                steps{
-                    sh "./scripts/ansible.sh"
-                }
-            }
             stage('Test'){
                 steps{
                     sh "./scripts/test.sh"
@@ -14,6 +9,11 @@ pipeline{
             stage('Build Images'){
                 steps{
                     sh "./scripts/build.sh"
+                }
+            }
+            stage('Run Ansible'){
+                steps{
+                    sh "./scripts/ansible.sh"
                 }
             }
             stage('Push'){
