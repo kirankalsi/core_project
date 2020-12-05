@@ -10,6 +10,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 [workers]
 worker1
+worker2
 
 [workers:vars]
 ansible_user=kiran11kalsi
