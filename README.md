@@ -93,10 +93,10 @@ The services I have chosen within the pipeline provide the most efficient method
 
 #### Cluster
 In my cluster (group of virtual machines). Initially I wanted to have one Swarm manager with 2 Swarm workers. As presented in the diagram below.  
-![ideal-cluster](https://github.com/kirankalsi/core_project/blob/main/images/cluster.png)
+![ideal-cluster](https://github.com/kirankalsi/core_project/blob/main/images/cluster.png)  
 Unfortunately, when configuring my cluster I had issues with deploying worker1 in the Ansible playbook,
 so I decided to have one swarm manager and only one worker. As shown in the diagram below.  
-![actual-cluster](https://github.com/kirankalsi/core_project/blob/main/images/actual-cluster.png)
+![actual-cluster](https://github.com/kirankalsi/core_project/blob/main/images/actual-cluster.png)  
 Using Docker Swarm made it easier for me to manage multiple containers deployed across the cluster.
 
 ### Project Tracking
@@ -104,15 +104,15 @@ Before starting on the code of my application a Trello board
 was set up and used to track the progress of the project and to demonstrate my workflow, from planning to testing and finally to completion.
 Throughout this project I ran 2 sprints. Below is a screenshot of my first sprint which encased the development side of the project, where my aim was 
 to build the essential software functionality.  
-![trello1]()
+![trello1](https://github.com/kirankalsi/core_project/blob/main/images/sprint1.PNG)  
 Below is a screenshot of my second sprint which encased the operations side of the project.  
-![trello2]()
+![trello2](https://github.com/kirankalsi/core_project/blob/main/images/sprint2.PNG)  
 You can find the full Trello Board [Here](https://trello.com/b/EonadklO/core-project)
 
 ### Risk Assessment
 It is always important to carry out a risk assessment for any project.
 Below is a screenshot of my risk assessment for the project. This is where I have outlined potential risks, their impacts and mitigation techniques that I may need.  
-![riskassessment]()
+![riskassessment](https://github.com/kirankalsi/core_project/blob/main/images/riskassessment.PNG)  
 The full document can be found [here](https://docs.google.com/spreadsheets/d/1-UdjCUO-fQm1SgKLLMErl-8Uanb5s3N-4sEWApghpvM/edit?usp=sharing)
 
 ### Testing
