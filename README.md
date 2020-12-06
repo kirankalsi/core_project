@@ -25,7 +25,7 @@ Contents
 
 
 ### Resources
-[Trello Board](https://trello.com/b/EonadklO/core-project)
+[Trello Board](https://trello.com/b/EonadklO/core-project)  
 [Risk Assessment](https://docs.google.com/spreadsheets/d/1-UdjCUO-fQm1SgKLLMErl-8Uanb5s3N-4sEWApghpvM/edit?usp=sharing)
 
 ### Brief
