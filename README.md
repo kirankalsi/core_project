@@ -69,7 +69,7 @@ Below is the structure of my services:
 Service 1 runs as the core which communicates with the other 3 services, and has a relation to an SQL database. 
 Service 2 and 3 will act as generators, producing a random Car Manufacturer and Car Type (objects), that service 
 4 will use to create the total Price (outcome), in which service 1 will display to the user.
-Data entries stored in the MySQL database are connected to a database volume (used to persist data created and used by the MySQL container).
+Data entries stored in the MySQL database are connected to a database volume (used to persist data created and used by the MySQL container).  
 ![app-arc](https://github.com/kirankalsi/core_project/blob/main/images/app-arc.png)
 
 #### Database Structure
@@ -77,7 +77,7 @@ I have created an entity relationship diagram (ERD) to show the structure of my 
 As my database only stores the generated Car Manufacturers, Types and calculated Price; it 
 only requires one table.
 ##### ERD Diagram
-The image below shows my ERD diagram.
+The image below shows my ERD diagram.  
 ![erd](https://github.com/kirankalsi/core_project/blob/main/images/vehicle-db.png)
 
 #### CI Pipeline
@@ -92,10 +92,10 @@ The services I have chosen within the pipeline provide the most efficient method
 ![final-pipeline](https://github.com/kirankalsi/core_project/blob/main/images/CI-pipeline3.png)
 
 #### Cluster
-In my cluster (group of virtual machines). Initially I wanted to have one Swarm manager with 2 Swarm workers. As presented in the diagram below.
+In my cluster (group of virtual machines). Initially I wanted to have one Swarm manager with 2 Swarm workers. As presented in the diagram below.  
 ![ideal-cluster](https://github.com/kirankalsi/core_project/blob/main/images/cluster.png)
 Unfortunately, when configuring my cluster I had issues with deploying worker1 in the Ansible playbook,
-so I decided to have one swarm manager and only one worker. As shown in the diagram below.
+so I decided to have one swarm manager and only one worker. As shown in the diagram below.  
 ![actual-cluster](https://github.com/kirankalsi/core_project/blob/main/images/actual-cluster.png)
 Using Docker Swarm made it easier for me to manage multiple containers deployed across the cluster.
 
@@ -103,15 +103,15 @@ Using Docker Swarm made it easier for me to manage multiple containers deployed 
 Before starting on the code of my application a Trello board 
 was set up and used to track the progress of the project and to demonstrate my workflow, from planning to testing and finally to completion.
 Throughout this project I ran 2 sprints. Below is a screenshot of my first sprint which encased the development side of the project, where my aim was 
-to build the essential software functionality.
+to build the essential software functionality.  
 ![trello1]()
-Below is a screenshot of my second sprint which encased the operations side of the project.
+Below is a screenshot of my second sprint which encased the operations side of the project.  
 ![trello2]()
 You can find the full Trello Board [Here](https://trello.com/b/EonadklO/core-project)
 
 ### Risk Assessment
 It is always important to carry out a risk assessment for any project.
-Below is a screenshot of my risk assessment for the project. This is where I have outlined potential risks, their impacts and mitigation techniques that I may need.
+Below is a screenshot of my risk assessment for the project. This is where I have outlined potential risks, their impacts and mitigation techniques that I may need.  
 ![riskassessment]()
 The full document can be found [here](https://docs.google.com/spreadsheets/d/1-UdjCUO-fQm1SgKLLMErl-8Uanb5s3N-4sEWApghpvM/edit?usp=sharing)
 
@@ -124,18 +124,18 @@ Below are summaries of the tests for each service:
 * Service 1
 Initially I found it difficult when testing service 1 as it required inputs from the other services. To get round this I imported a mock module, 
 that allowed me to mock the get requests sent. Therefore a mock unit test was conducted to replicate 
-API results from the application (without it being live) to check if the same results were produced in order to pass the test.
+API results from the application (without it being live) to check if the same results were produced in order to pass the test.  
 ![test-app1](https://github.com/kirankalsi/core_project/blob/main/images/test-app1.PNG)
 * Service 2
 A unit test was conducted to ensure a random Car Manufacturer was generated from a list of 7 options using a get request 
-and asserting it back to check if the result would pass.
+and asserting it back to check if the result would pass.  
 ![test-app2](https://github.com/kirankalsi/core_project/blob/main/images/test-app2.PNG)
 * Service 3
 A unit test was conducted to ensure a random Car Type was generated from a list of 7 options using a get request 
-and asserting it back to check if the result would pass.
+and asserting it back to check if the result would pass.  
 ![test-app3](https://github.com/kirankalsi/core_project/blob/main/images/test-app3.PNG)
 * Service 4
-Unit tests were conducted to ensure the post request returned the correct price.
+Unit tests were conducted to ensure the post request returned the correct price.  
 ![test-app4](https://github.com/kirankalsi/core_project/blob/main/images/test-app4.PNG)
 I then made a container to run these tests in my Jenkins Pipeline (lightweight virtual environments used to package up code with its necessary dependencies).
 
@@ -143,7 +143,7 @@ I then made a container to run these tests in my Jenkins Pipeline (lightweight v
 I used Git as a version control system with GitHub as the provider. Github has allowed me to checkout different branches of the project 
  and focus on features individually. I would merge code into my main branch once I know everything is functioning properly. Usually I would delete
 my branch after it has been merged, but for the purpose of this project I have kept them to show I was following the
-Feature-Branch model. Below is a screenshot of my branches.
+Feature-Branch model. Below is a screenshot of my branches.  
 ![branches](https://github.com/kirankalsi/core_project/blob/main/images/branches.PNG)
 
 I also implemented GitHub's webhooks feature so my code can be polled by Jenkins' build triggers (automatic builds).
@@ -171,16 +171,16 @@ using a multi-stage pipeline script.
 The GitHub webhook feature was particularly useful as whenever I commited a change to my source code 
 GitHub informed Jenkins and would automatically start a build, this is something I will be demonstrating in the demo.
 My build logs are stored in Jenkins. During the initial attempt of deploy the application experienced some problems as reported below, 
-but eventually all successfully passed.
+but eventually all successfully passed.  
 ![jenkinslogs2](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs2.PNG)
 ![jenkinslogs1](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs1.PNG)
-After many more commits (approx. 60) I managed to create a build including ansible to run successfully aswell.
+After many more commits (approx. 60) I managed to create a build including ansible to run successfully aswell.  
 ![ansible-success](https://github.com/kirankalsi/core_project/blob/main/images/ansible-success.PNG)
 
 ### Front-End Design
 My front-end design is still in its early stages as it is built using basic HTML. However it meets the MVP
 and I am happy with its functionality. Below is the main page which provided by service 1. 
-It generate a random Car Manufactuer and Type then displays the price of it.
+It generate a random Car Manufactuer and Type then displays the price of it.  
 ![homepage](https://github.com/kirankalsi/core_project/blob/main/images/website.PNG)
 
 ### Future Improvements
