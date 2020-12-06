@@ -121,20 +121,20 @@ When running pytest --cov --cov-report term-missing I could see which parts of m
 After updating my tests, the unit testing on my application folder in each service came to 100% coverage overall.
 You can also see these coverage reports in the jenkins logs as I have used Jenkins to automatically run Pytest.
 Below are summaries of the tests for each service:
-* Service 1
+* Service 1:
 Initially I found it difficult when testing service 1 as it required inputs from the other services. To get round this I imported a mock module, 
 that allowed me to mock the get requests sent. Therefore a mock unit test was conducted to replicate 
 API results from the application (without it being live) to check if the same results were produced in order to pass the test.  
 ![test-app1](https://github.com/kirankalsi/core_project/blob/main/images/test-app1.PNG)
-* Service 2
+* Service 2:
 A unit test was conducted to ensure a random Car Manufacturer was generated from a list of 7 options using a get request 
 and asserting it back to check if the result would pass.  
 ![test-app2](https://github.com/kirankalsi/core_project/blob/main/images/test-app2.PNG)
-* Service 3
+* Service 3:
 A unit test was conducted to ensure a random Car Type was generated from a list of 7 options using a get request 
 and asserting it back to check if the result would pass.  
 ![test-app3](https://github.com/kirankalsi/core_project/blob/main/images/test-app3.PNG)
-* Service 4
+* Service 4:
 Unit tests were conducted to ensure the post request returned the correct price.  
 ![test-app4](https://github.com/kirankalsi/core_project/blob/main/images/test-app4.PNG)  
 I then made a container to run these tests in my Jenkins Pipeline (lightweight virtual environments used to package up code with its necessary dependencies).
@@ -143,7 +143,8 @@ I then made a container to run these tests in my Jenkins Pipeline (lightweight v
 I used Git as a version control system with GitHub as the provider. Github has allowed me to checkout different branches of the project 
  and focus on features individually. I would merge code into my main branch once I know everything is functioning properly. Usually I would delete
 my branch after it has been merged, but for the purpose of this project I have kept them to show I was following the
-Feature-Branch model. Below is a screenshot of my branches.  
+Feature-Branch model. Below is a screenshot of my branches.
+#### Branches
 ![branches](https://github.com/kirankalsi/core_project/blob/main/images/branches.PNG)
 
 I also implemented GitHub's webhooks feature so my code can be polled by Jenkins' build triggers (automatic builds).
