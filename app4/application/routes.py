@@ -39,5 +39,5 @@ def total_price():
     else:
         veh_price = 9999
     
-    total_price = (man_price + veh_price)*20
+    total_price = (man_price + veh_price)*100000
     return str(total_price)
