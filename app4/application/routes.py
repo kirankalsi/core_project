@@ -9,35 +9,35 @@ def total_price():
     man = data['manufacturer']
     veh = data['vehicle_type']
 
-    if man == 'AUDI':
+    if man == 'Audi':
         man_price = 44500
     elif man == 'BMW':
         man_price = 45000
-    elif man == 'PORSCHE':
+    elif man == 'Porsche':
         man_price = 99000
-    elif man == 'FORD':
+    elif man == 'Ford':
         man_price = 11500
-    elif man == 'FERRARI':
+    elif man == 'Ferrari':
         man_price = 160000
-    elif man == 'LAMBORGHINI':
+    elif man == 'Lamborghini':
         man_price = 150000
     else:
         man_price = 26500
 
-    if veh == 'HHHatchback':
+    if veh == 'Hatchback':
         veh_price = 999
-    elif veh == 'RRRoadster':
+    elif veh == 'Roadster':
         veh_price = 12050
-    elif veh == 'PPPickup Truck':
+    elif veh == 'Pickup Truck':
         veh_price = 8888
-    elif veh == 'SSSports Car':
+    elif veh == 'Sports Car':
         veh_price = 20000
-    elif veh == 'SSSaloon':
+    elif veh == 'Saloon':
         veh_price = 3333
-    elif veh == 'CCConvertible':
+    elif veh == 'Convertible':
         veh_price = 21500
     else:
         veh_price = 9999
     
-    total_price = (man_price + veh_price)*100000
+    total_price = man_price + veh_price
     return str(total_price)
