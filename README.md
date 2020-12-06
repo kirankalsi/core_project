@@ -93,10 +93,10 @@ The services I have chosen within the pipeline provide the most efficient method
 
 #### Cluster
 In my cluster (group of virtual machines). Initially I wanted to have one Swarm manager with 2 Swarm workers. As presented in the diagram below.  
-![ideal-cluster](https://github.com/kirankalsi/core_project/blob/main/images/cluster.png)
+![ideal-cluster](https://github.com/kirankalsi/core_project/blob/main/images/cluster.png)  
 Unfortunately, when configuring my cluster I had issues with deploying worker1 in the Ansible playbook,
 so I decided to have one swarm manager and only one worker. As shown in the diagram below.  
-![actual-cluster](https://github.com/kirankalsi/core_project/blob/main/images/actual-cluster.png)
+![actual-cluster](https://github.com/kirankalsi/core_project/blob/main/images/actual-cluster.png)  
 Using Docker Swarm made it easier for me to manage multiple containers deployed across the cluster.
 
 ### Project Tracking
