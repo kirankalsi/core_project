@@ -15,7 +15,7 @@ Contents
 * Risk Assessment
 * Testing
 * Git
-* Docker --- Andrea
+* Docker
 * Ansible
 * Nginx
 * Jenkins
@@ -84,7 +84,7 @@ The image below shows my ERD diagram.
 When starting my application I had not yet learnt about all the technologies required for this project.
 The image below shows my inital thoughts on the CI Pipeline.
 ##### Initial CI Pipeline
-![initial-pipeline](https://github.com/kirankalsi/core_project/blob/main/images/CI-pipeline2.png)
+![initial-pipeline](https://github.com/kirankalsi/core_project/blob/main/images/CI-pipeline2.png)  
 The next image below represents my final continuous integration pipeline with the associated frameworks and services related to them.
 It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program.
 The services I have chosen within the pipeline provide the most efficient method of rapid development to be automated and tested.
@@ -136,7 +136,7 @@ and asserting it back to check if the result would pass.
 ![test-app3](https://github.com/kirankalsi/core_project/blob/main/images/test-app3.PNG)
 * Service 4
 Unit tests were conducted to ensure the post request returned the correct price.  
-![test-app4](https://github.com/kirankalsi/core_project/blob/main/images/test-app4.PNG)
+![test-app4](https://github.com/kirankalsi/core_project/blob/main/images/test-app4.PNG)  
 I then made a container to run these tests in my Jenkins Pipeline (lightweight virtual environments used to package up code with its necessary dependencies).
 
 ### Git
@@ -173,7 +173,7 @@ GitHub informed Jenkins and would automatically start a build, this is something
 My build logs are stored in Jenkins. During the initial attempt of deploy the application experienced some problems as reported below, 
 but eventually all successfully passed.  
 ![jenkinslogs2](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs2.PNG)
-![jenkinslogs1](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs1.PNG)
+![jenkinslogs1](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs1.PNG)  
 After many more commits (approx. 60) I managed to create a build including ansible to run successfully aswell.  
 ![ansible-success](https://github.com/kirankalsi/core_project/blob/main/images/ansible-success.PNG)
 
