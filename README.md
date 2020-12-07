@@ -160,7 +160,7 @@ Firstly the swarm was initialised then the application was run using docker stac
 
 ### Ansible
 I used Ansible as my configuration management tool to set up my cluster. I did this by creating a playbook, inventory & roles - 
-in order to install Docker and configure my virtual machines which are eventually deployed as a Swarm. Ansible was very handy as 
+in order to install Docker and configure my virtual machines (as a manager or worker) which are eventually deployed as a Swarm. Ansible was very handy as 
 it helped to automate and simplify repetitive tasks.
 
 ### Nginx
