@@ -155,7 +155,8 @@ I used Docker and Docker-compose as the containerisation tools. Docker allowed m
 Providing the application with its own environment allows it to be recreated across any machine with Docker on it.
 Docker-compose allowed me to run multiple containers using a configuration file which made the process of 
 launching each service itself much easier and alot more efficient.
-I used Docker Swarm as the orchestration tool. ...
+I used Docker Swarm as the orchestration tool to manage multiple containers deployed across multiple host machines.
+Firstly the swarm was initialised then the application was run using docker stack. Before deploying the stack, 2 replicas were also deployed to each service to make it more likely for the app to stay up during an update.
 
 ### Ansible
 I used Ansible as my configuration management tool to set up my cluster. I did this by creating a playbook, inventory & roles - 
