@@ -75,7 +75,7 @@ Data entries stored in the MySQL database are connected to a database volume (us
 #### Database Structure
 I have created an entity relationship diagram (ERD) to show the structure of my database.
 As my database only stores the generated Car Manufacturers, Types and calculated Price; it 
-only requires one table.
+only requires one table. As such, there was no entity relationship.
 ##### ERD Diagram
 The image below shows my ERD diagram.  
 ![erd](https://github.com/kirankalsi/core_project/blob/main/images/vehicle-db.png)
