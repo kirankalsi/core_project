@@ -57,7 +57,7 @@ To fulfil these requirements I decided to make an application with 4 services wh
 communicate with each other and will return a random Car Manufacturer and Car Type
 and will return a price of the Car.
 Below is the structure of my services:
-* Service 1: Renders a template which displays results from other 3 services
+* Service 1: Acts as the frontend of the application, renders a template which displays results from other 3 services
 * Service 2: Returns a random Car Manufacturer 
 * Service 3: Returns a random Car Type
 * Service 4: Returns the price of the car generated which is calculated using the output of both Service 2 and 3 
