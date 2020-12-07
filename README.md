@@ -141,13 +141,13 @@ I then made a container to run these tests in my Jenkins Pipeline (lightweight v
 
 ### Git
 I used Git as a version control system with GitHub as the provider. Github has allowed me to checkout different branches of the project 
- and focus on features individually. I would merge code into my main branch once I know everything is functioning properly. Usually I would delete
+ and focus on features individually. I would merge code into my main branch once I knew everything was functioning properly. Usually I would delete
 my branch after it has been merged, but for the purpose of this project I have kept them to show I was following the
 Feature-Branch model. Below is a screenshot of my branches.
 #### Branches
 ![branches](https://github.com/kirankalsi/core_project/blob/main/images/branches.PNG)
 
-I also implemented GitHub's webhooks feature so my code can be polled by Jenkins' build triggers (automatic builds).
+I also implemented GitHub's webhook feature so my code can be polled by Jenkins' build triggers (automatic builds).
 
 ### Docker
 I used Docker and Docker-compose as the containerisation tools. Docker allowed me to build the environments I needed to allow the application to run
