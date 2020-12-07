@@ -174,7 +174,7 @@ The GitHub webhook feature was particularly useful as whenever I commited a chan
 GitHub informed Jenkins and would automatically start a build. 
 Not only did Jenkins automate the deployment process, it also allowed me to view the logs of previous builds. 
 They were extremely useful as they allowed me to see what exactly went wrong and when - this helpeds me fix all the problems with my build.  
-![console]()  
+![console](https://github.com/kirankalsi/core_project/blob/main/images/console.PNG)  
 My build logs are stored in Jenkins. During the initial attempt of deploy the application experienced some problems as reported below, 
 but eventually all successfully passed.  
 ![jenkinslogs2](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs2.PNG)
