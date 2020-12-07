@@ -170,7 +170,10 @@ Each VM used Nginx as a web server to connect to the application on port 80, ins
 I used Jenkins as my CI Server. This allowed me to deploy my application very easily by creating a Jenkins Pipeline job 
 using a multi-stage pipeline script.
 The GitHub webhook feature was particularly useful as whenever I commited a change to my source code 
-GitHub informed Jenkins and would automatically start a build, this is something I will be demonstrating in the demo.
+GitHub informed Jenkins and would automatically start a build, this is something I will be demonstrating in the demo. 
+Not only does Jenkins automate the deployment process, it also allows you to view the logs of your previous builds. 
+They can be extremely useful as they allow you to see what exactly went wrong and when. This helps you fix all the problems with your build.  
+![console]()  
 My build logs are stored in Jenkins. During the initial attempt of deploy the application experienced some problems as reported below, 
 but eventually all successfully passed.  
 ![jenkinslogs2](https://github.com/kirankalsi/core_project/blob/main/images/jenkinslogs2.PNG)
