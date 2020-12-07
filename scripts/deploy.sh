@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh kiran11kalsi@34.105.145.24 << EOF
+ssh kiran11kalsi@35.246.71.129 << EOF
 
 cd core_project
 git pull
